@@ -2,10 +2,11 @@
 Progetto scritto in linguaggio C++ con il quale si crea una matrice di numeri casuali, non quadrata, di dimensione scelta dall’utente, e che determina il valore massimo e minimo con le loro rispettive coordinate.
 
 ## Librerie
-Queste sono le librerie necessarie per la realizzazione del progetto
-#include <iostream>
+Queste sono le librerie necessarie per la realizzazione del progetto:
+```#include <iostream>
 #include <time.h>
 #include <stdlib.h>
+```
 
 ## Inizializzazione delle variabili
 La variabile:
