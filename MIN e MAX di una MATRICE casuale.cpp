@@ -48,33 +48,31 @@ int main()
 	for( int i = 0; i < riga; i ++ )
 		for( int j = 0; j < colonna; j ++ )
 		{
-			if ( i == 0 && j == 0 ) // se è la prima iterazione la variabile MAX salva il primo valore
-				MAX = matrice[i][j]; // <--
-
+			if ( i == 0 && j == 0 ) // se Ã¨ la prima iterazione la variabile MAX salva il primo valore
+			{
+				MIN = matrice[i][j];
+				MAX = matrice[i][j];
+			}
+			
 			if ( MAX < matrice[i][j] ) 
 			{
 				MAX = matrice[i][j]; // MAX salva il nuovo valore maggiore del precedente
 				maxR = i + 1;        // maxR salva il numero di riga del nuovo valore
 				maxC = j + 1;        // maxC salva il numero di colonna del nuovo valore
 			}
-		}
-	// stampa del valore massimo e le sue coordinate
-	cout << endl << "VALORE MASSIMO: " << MAX << " IN POSIZIONE " << maxR << ", " << maxC << endl;
-	// istruzioni che servono per trovare il valore minime e le coordinate dello stesso
-	for ( int i = 0; i < riga; i ++ )
-		for ( int j = 0; j < colonna; j ++ )
-		{
-			if ( i == 0 && j == 0 ) // se è la prima iterazione la variabile MIN salva il primo valore
-				MIN = matrice[i][j]; // <--
-
-			if ( MIN > matrice[i][j] )
+			
+				if ( MIN > matrice[i][j] )
 			{
 				MIN = matrice[i][j]; // MIN salva il nuovo valore minore del precedente
 				minR = i + 1;        // minR salva il numero di riga del nuovo valore
 				minC = j + 1;        // minC salva il numero di colonna del nuovo valore
 			}
+			
 		}
+	// stampa del valore massimo e le sue coordinate
+	cout << endl << "VALORE MASSIMO: " << MAX << " IN POSIZIONE " << maxR << ", " << maxC << endl;
+	// istruzioni che servono per trovare il valore minime e le coordinate dello stesso
+
 	// stampa del valore minimo e le sue coordinate
 	cout << endl << "VALORE MINIMO: " << MIN << " IN POSIZIONE " << minR << ", " << minC << endl;	
 }
-
